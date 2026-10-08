@@ -1,0 +1,20 @@
+# Arquivos criados pelos instaladores das ferramentas (cada um baixa/gera os seus)
+ferramentas/whisper/bin/
+ferramentas/whisper/modelos/
+ferramentas/whisper/iniciar_whisper.bat
+ferramentas/vosk/modelos/
+ferramentas/vosk/iniciar_vosk.bat
+ferramentas/vosk/servidor_vosk.py
+
+# Áudios guardados para diagnóstico (voz de jogadores: nunca publicar)
+ferramentas/vosk/ultimos_audios/
+*.wav
+
+# Python
+__pycache__/
+*.pyc
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini

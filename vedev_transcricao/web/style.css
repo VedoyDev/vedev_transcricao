@@ -1,0 +1,73 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.oculto {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#indicador {
+    position: absolute;
+    bottom: 11vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(15, 15, 20, 0.75);
+    color: #fff;
+    font-size: 14px;
+    transition: opacity 0.15s;
+}
+
+#indicador .ponto {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #e5484d;
+    animation: pulsar 1s infinite;
+}
+
+#indicador.processando .ponto {
+    background: #f5a524;
+    animation: girar 0.8s linear infinite;
+    border-radius: 2px;
+}
+
+#indicador.falha .ponto {
+    background: #8b8b8b;
+    animation: none;
+}
+
+#legenda {
+    position: absolute;
+    bottom: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 60vw;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: rgba(15, 15, 20, 0.75);
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.35;
+    text-align: center;
+    text-shadow: 0 1px 2px #000;
+    transition: opacity 0.25s;
+}
+
+@keyframes pulsar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes girar {
+    to { transform: rotate(360deg); }
+}
